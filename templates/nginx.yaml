@@ -1,0 +1,13 @@
+kind: DockerDeployment
+metadata:
+    name: { { .Values.name } }
+    labels:
+        app: helloworld
+        example: "true"
+spec:
+    replicas: { { .Values.nginxReplicas } }
+    instances:
+        - name: helloworld
+          type: container
+          image: nginx:alpine
+          environment: {}
