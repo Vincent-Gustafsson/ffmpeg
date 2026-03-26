@@ -3,7 +3,7 @@ metadata:
     colonyname: {{ colonyName }}
     name: web
 spec:
-    executortype: "thisisatest"
+    executorType: "thisisatest"
     image: nginx:latest
     replicas: {{ nginx.replicas }}
     ports:
