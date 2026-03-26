@@ -2,6 +2,8 @@ kind: ExecutorDeployment
 metadata:
     colonyname: {{ colonyName }}
     name: web
+handler:
+    executortype: "docker-reconciler"
 spec:
     image: nginx:latest
     replicas: {{ nginx.replicas }}
