@@ -1,13 +1,10 @@
-kind: DockerDeployment
+kind: ExecutorDeployment
 metadata:
-    name: {{ name }}
-    labels:
-        app: helloworld
-        example: "true"
+    colonyname: {{ colonyName }}
+    name: web
 spec:
-    replicas: {{ nginxReplicas }}
-    instances:
-        - name: helloworld
-          type: container
-          image: nginx:alpine
-          environment: {}
+    image: nginx:latest
+    replicas: {{ nginx.replicas }}
+    ports:
+        - name: http
+          port: {{ nginx.port }}

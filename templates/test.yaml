@@ -1,9 +1,0 @@
-kind: ExecutorDeployment
-metadata:
-    name: web
-spec:
-    image: nginx:latest
-    replicas: 3
-    ports:
-        - name: http
-          port: {{ nginxExecPort }}
