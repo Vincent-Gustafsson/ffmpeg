@@ -1,11 +1,11 @@
 kind: DockerDeployment
 metadata:
-    name: { { .Values.name } }
+    name: {{ name }}
     labels:
         app: helloworld
         example: "true"
 spec:
-    replicas: { { .Values.nginxReplicas } }
+    replicas: {{ nginxReplicas }}
     instances:
         - name: helloworld
           type: container

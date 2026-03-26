@@ -1,2 +1,3 @@
 name: "default name"
 nginxReplicas: 67
+nginxExecPort: 6969
