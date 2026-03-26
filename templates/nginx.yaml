@@ -1,8 +1,8 @@
 kind: ExecutorDeployment
 metadata:
-    colonyname: { { colonyName } }
+    colonyname: {{ colonyName }}
     name: web
 spec:
     executorType: "thisisatest"
     image: nginx:latest
-    replicas: { { nginx.replicas } }
+    replicas: {{ nginx.replicas }}
